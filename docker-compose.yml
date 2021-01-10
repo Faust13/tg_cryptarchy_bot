@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  vegabot:
+    container_name: cryptbot
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:5073:5073"
+    environment:
+      - TG_API_KEY
